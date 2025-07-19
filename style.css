@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f8f8f8;
+    color: #333;
+  }
+  
+  header {
+    background: #fff;
+    padding: 16px 32px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tool-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  
+  .tool-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .tool-card .thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .tool-card p {
+    padding: 12px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.75rem;
+    color: #999;
+  }
+  
+  .tool-card a {
+    color: #00acee; /* ← ここがリンクの文字色！ */
+    text-decoration: none;
+    display: block;
+  }
+  
+  .tool-card a:hover {
+    text-decoration: underline;
+  }
+  

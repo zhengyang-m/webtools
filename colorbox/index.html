@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyColorBox</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <h1>🎨 MyColorBox</h1>
+<p class="description">よく使うカラーコードを登録・コピーできる、デザイナー向けカラー管理ツールです。</p>
+
+<div class="color-grid">
+  <div>
+    <div class="color-card" data-hex="#F18F0E" style="background-color: #F18F0E">
+      <span class="label">Orange<br>#F18F0E</span>
+    </div>
+    <p class="note">ロゴ、タイトルなどに使用</p>
+  </div>
+
+  <div>
+    <div class="color-card" data-hex="#092846" style="background-color: #092846">
+      <span class="label">Navy<br>#092846</span>
+    </div>
+    <p class="note">ヘッダーやフッターなどに使用</p>
+  </div>
+
+  <div>
+    <div class="color-card" data-hex="#00acee" style="background-color: #00acee">
+      <span class="label">Light Blue<br>#00acee</span>
+    </div>
+    <p class="note">各種リンクに使用</p>
+  </div>
+
+  <div>
+    <div class="color-card" data-hex="#03C9A9" style="background-color: #03C9A9">
+      <span class="label">Green<br>#03C9A9</span>
+    </div>
+    <p class="note">ボタンに使用</p>
+  </div>
+
+  <div>
+    <div class="color-card" data-hex="#FF0000" style="background-color: #FF0000">
+      <span class="label">Red<br>#FF0000</span>
+    </div>
+    <p class="note">重要なお知らせ</p>
+  </div>
+</div>
+
+
+    <!-- 追加カラーはここに複製して増やすだけ -->
+  </div>
+
+  <p class="copied-message" id="copied">コピーしました！✨</p>
+
+  <!-- 追加ボタン -->
+<button id="openModal" class="add-button">＋追加</button>
+
+<!-- モーダル -->
+<div id="colorModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>カラーを追加</h2>
+    <input type="text" id="colorName" placeholder="色の名前" />
+    <input type="text" id="colorCode" placeholder="#HEXコード（例: #ffcc00）" />
+    <input type="text" id="colorNote" placeholder="用途など（任意）" />
+    <button id="addColorBtn">追加する</button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

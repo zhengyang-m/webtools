@@ -1,0 +1,147 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+input {
+  margin: 20px 0;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #33cc99;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+#drop-area {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #777;
+  transition: 0.2s ease;
+}
+
+#drop-area.hover {
+  border-color: #33cc99;
+  background-color: #f0fff7;
+  color: #33cc99;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #777;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+
+
+#upload {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #85d5ba;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+
+.download-button,
+#download-zip {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.download-button {
+  background-color: #2ecc9d;
+  color: white;
+}
+
+#download-zip {
+  background-color: #cccccc;
+  color: #3b3b3b;
+}
+
+#download {
+  text-align: center; 
+  margin-top: 20px;
+}
+#download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.panda-floating {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  z-index: 1000;
+  animation: moveSideways 10s infinite alternate ease-in-out;
+}
+
+@keyframes moveSideways {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 150px); 
+  }
+}
+
+@media (max-width: 600px) {
+  #drop-area {
+    padding: 20px;
+    width: 90%;
+  }
+
+  #upload,
+  #download-zip {
+    width: 100%;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .download-button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+input[type="file"] {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+

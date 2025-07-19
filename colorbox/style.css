@@ -1,0 +1,185 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.color-card {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-card:hover {
+  transform: scale(1.03);
+}
+
+.label {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.note {
+  font-size: 0.75rem;
+  color: #444;
+  margin-top: 0.4rem;
+}
+
+#copied {
+  display: none; /* ← これがないと最初から表示されちゃう */
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #333;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  z-index: 1000;
+}
+
+/* 右上の追加ボタン */
+.add-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00acee;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* モーダルの背景 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* モーダルの中身 */
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 閉じるボタン */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* 入力フィールド */
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* モーダル内の追加ボタン */
+#addColorBtn {
+  margin-top: 16px;
+  padding: 10px;
+  width: 100%;
+  background-color: #3ec6a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.color-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.note {
+  font-size: 0.75rem;
+  color: #444;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+.color-card {
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 24px;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}

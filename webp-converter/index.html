@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>画像 → WebP 変換ツール</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+
+<body>
+
+  <h1>画像をWebPに変換！</h1>
+
+  <div id="drop-area">
+    <p>ここに画像をドラッグ＆ドロップ</p>
+    <input type="file" id="upload" accept="image/*" multiple />
+  </div>
+
+  <br />
+  <canvas id="canvas" style="display:none;"></canvas>
+  <br />
+  <div id="download"></div>
+  <button id="download-zip" style="display:none;">すべてまとめてZIPでダウンロード</button>
+  <img src="panda.png" alt="Panda" class="panda-floating">
+
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
