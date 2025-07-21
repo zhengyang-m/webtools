@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyColorBox</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+  <header>
+    <h1><a href="../index.html">My Tools</a></h1>
+    <nav class="hamburger-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="../colorbox/index.html">ColorBox</a></li>
+        <li><a href="../webp-converter/index.html">WebP変換</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="colorbox-title">🎨 MyColorBox</h1>
+    <p class="colorbox-description">よく使うカラーコードを登録・コピーできる、デザイナー向けカラー管理ツールです。</p>
+
+    <div class="colorbox-grid" id="colorContainer">
+      <div>
+        <div class="colorbox-card" data-hex="#F18F0E" style="background-color: #F18F0E">
+          <span class="label">Orange<br>#F18F0E</span>
+        </div>
+        <p class="note">ロゴ、タイトルなどに使用</p>
+      </div>
+      <div>
+        <div class="colorbox-card" data-hex="#092846" style="background-color: #092846">
+          <span class="label">Navy<br>#092846</span>
+        </div>
+        <p class="note">ヘッダーやフッターなどに使用</p>
+      </div>
+    </div>
+
+    <p class="copied-message" id="copied">コピーしました！✨</p>
+  </main>
+
+  <button id="openModal" class="colorbox-add-button">＋追加</button>
+
+  <div id="colorModal" class="colorbox-modal">
+    <div class="colorbox-modal-content">
+      <span id="closeModal" class="colorbox-close">&times;</span>
+      <h2>カラーを追加</h2>
+      <div class="modal-inputs">
+        <input type="text" id="colorName" placeholder="色の名前" />
+        <input type="text" id="colorCode" placeholder="#HEXコード（例: #ffcc00）" />
+        <input type="text" id="colorNote" placeholder="用途など（任意）" />
+        <button id="addColorBtn">追加する</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
