@@ -4,15 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Tools</title>
-  <link rel="stylesheet" href="/webtools/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="shared-header"></div>
+  <script>
+    fetch("/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("shared-header").innerHTML = data;
+      });
+  </script>
+  
+
   <header>
-    <h1><a href="/webtools/index.html">My Tools</a></h1>
-    <nav>
-      <ul>
-        <li><a href="/webtools/colorbox/index.html">ColorBox</a></li>
-        <li><a href="/webtools/webp-converter/index.html">WebP変換</a></li>
+    <h1><a href="index.html">My Tools</a></h1>
+    <nav class="hamburger-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="colorbox/index.html">ColorBox</a></li>
+        <li><a href="webp-converter/index.html">WebP変換</a></li>
       </ul>
     </nav>
   </header>
@@ -20,14 +32,14 @@
   <main>
     <ul class="tool-grid">
       <li class="tool-card">
-        <a href="/webtools/colorbox/index.html">
-          <img class="thumbnail" src="/webtools/images/colorbox-thumb.png" alt="カラーコードコピー">
+        <a href="colorbox/index.html">
+          <img class="thumbnail" src="images/colorbox-thumb.png" alt="カラーコードコピー">
           <p>🎨 カラーコードコピー</p>
         </a>
       </li>
       <li class="tool-card">
-        <a href="/webtools/webp-converter/index.html">
-          <img class="thumbnail" src="/webtools/images/webp-thumb.png" alt="WebP変換ツール">
+        <a href="webp-converter/index.html">
+          <img class="thumbnail" src="images/webp-thumb.png" alt="WebP変換ツール">
           <p>🖼️ WebP変換ツール</p>
         </a>
       </li>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebP Converter</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html">My Tools</a></h1>
+    <nav class="hamburger-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="../colorbox/index.html">ColorBox</a></li>
+        <li><a href="../webp-converter/index.html">WebP変換</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="webp-converter-title">画像をWebPに変換！</h1>
+
+    <div id="drop-area" class="webp-converter-drop-area">
+      <p>ここに画像をドラッグ＆ドロップ</p>
+      <input type="file" id="upload" accept="image/*" multiple>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="download" class="webp-converter-download"></div>
+
+    <div style="text-align: center;">
+      <button id="download-zip" class="webp-converter-zip-button" style="display: none;">
+        すべてまとめてZIPでダウンロード
+      </button>
+    </div>
+
+    <img src="panda.png" alt="Panda" class="webp-converter-panda-floating">
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
