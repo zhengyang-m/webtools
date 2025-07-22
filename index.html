@@ -3,51 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Tools</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>ルーレット</title>
+  <link rel="stylesheet" href="/webtools/style.css" />
+  <style>
+    .roulette-container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .roulette-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto 30px auto;
+    }
+
+        #input-area > div {
+      margin-bottom: 16px;
+    }
+
+    #input-area input {
+      width: 240px;
+      padding: 8px;
+      margin-right: 8px;
+    }
+
+    #add-option {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    #result-display {
+      font-size: 1.3rem;
+      color: #00aaff;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
- 
-  
-
   <header>
-    <h1><a href="index.html">My Tools</a></h1>
+    <h1><a href="../index.html">My Tools</a></h1>
     <nav class="hamburger-nav">
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <ul class="menu">
-        <li><a href="colorbox/index.html">ColorBox</a></li>
-        <li><a href="webp-converter/index.html">WebP変換</a></li>
-        <li><a href="roulette/index.html">ルーレット</a></li>
+        <li><a href="../colorbox/index.html">ColorBox</a></li>
+        <li><a href="../webp-converter/index.html">WebP変換</a></li>
+        <li><a href="../roulette/index.html">ルーレット</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <ul class="tool-grid">
-      <li class="tool-card">
-        <a href="colorbox/index.html">
-          <img class="thumbnail" src="images/colorbox-thumb.png" alt="カラーコードコピー">
-          <p>🎨 カラーコードコピー</p>
-        </a>
-      </li>
-      <li class="tool-card">
-        <a href="webp-converter/index.html">
-          <img class="thumbnail" src="images/webp-thumb.png" alt="WebP変換ツール">
-          <p>🖼️ WebP変換ツール</p>
-        </a>
-      </li>
-       <li class="tool-card">
-        <a href="roulette/index.html">
-          <img class="thumbnail" src="images/roulette-thumb.png" alt="ルーレット">
-          <p>🎯 ルーレット</p>
-        </a>
-      </li>
-    </ul>
-  </main>
+ <main class="roulette-container">
+  <h2 class="roulette-title">🎯 ルーレット</h2>
+
+  <div id="input-area"></div>
+  <button id="add-option" class="roulette-button">選択肢を追加</button>
+
+ <div class="roulette-wrapper">
+  <!-- 矢印を前面に -->
+  <img src="/webtools/roulette/arrow.png" class="arrow" />
+  <!-- ルーレット本体 -->
+  <canvas id="roulette-canvas" width="300" height="300"></canvas>
+</div>
+
+
+  <button id="spin-button" class="roulette-button">回す！</button>
+  <div class="roulette-display" id="result-display">← 結果がここに出るよ</div>
+</main>
+
+
 
   <footer>
     <small>&copy; 2025 Mao Yamamoto</small>
   </footer>
+
+  <script src="/webtools/roulette/script.js"></script>
 </body>
 </html>
