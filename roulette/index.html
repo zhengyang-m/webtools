@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ルーレット</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .roulette-container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .roulette-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto 30px auto;
+    }
+
+        #input-area > div {
+      margin-bottom: 16px;
+    }
+
+    #input-area input {
+      width: 240px;
+      padding: 8px;
+      margin-right: 8px;
+    }
+
+    #add-option {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    #result-display {
+      font-size: 1.3rem;
+      color: #00aaff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html">My Tools</a></h1>
+    <nav class="hamburger-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="../colorbox/index.html">ColorBox</a></li>
+        <li><a href="../webp-converter/index.html">WebP変換</a></li>
+        <li><a href="../roulette/index.html">ルーレット</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="roulette-container">
+  <h2 class="roulette-title">🎯 ルーレット</h2>
+
+  <div id="input-area"></div>
+  <button id="add-option" class="roulette-button">選択肢を追加</button>
+
+ <div class="roulette-wrapper">
+  <!-- 矢印を前面に -->
+  <img src="arrow.png" class="arrow" />
+  <!-- ルーレット本体 -->
+  <canvas id="roulette-canvas" width="300" height="300"></canvas>
+</div>
+
+
+  <button id="spin-button" class="roulette-button">回す！</button>
+  <div class="roulette-display" id="result-display">← 結果がここに出るよ</div>
+</main>
+
+
+
+  <footer>
+    <small>&copy; 2025 Mao Yamamoto</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
